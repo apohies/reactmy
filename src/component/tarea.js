@@ -11,7 +11,7 @@ class  Tarea  extends React.Component
         return { fontSize:"20px",
                 color:this.props.tasks.done ?'yellow' : 'green',
             textDecoration:'none'}
-    }wss
+    }
     render(){
 
         const{tasks}=this.props;
