@@ -2,11 +2,11 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import Chango from './sample/Chango';
+import Chango from './component/Chango';
 
 
 ReactDOM.render(<App />, document.getElementById('root'));
-ReactDOM.render(<Chango />, document.getElementById('local'));
+
 
 
 // If you want your app to work offline and load faster, you can change
