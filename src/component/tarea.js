@@ -1,6 +1,6 @@
 import React from 'react';
 import "./task.css"
-import PropTypes from 'prop-types';
+
 
 
 
