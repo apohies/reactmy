@@ -12,7 +12,7 @@ class  Tablita  extends React.Component
     render(){
            
 
-            const{nombre}=this.props;
+            const{roblox}=this.props;
      return (<table >
      <tr>
        <th>Firstname</th>
@@ -20,9 +20,9 @@ class  Tablita  extends React.Component
        <th>Age</th>
      </tr>
      <tr>
-       <td>nada </td>
-       <td>nadita</td>
-     <td>{nombre}</td>
+       <td>{roblox.a} </td>
+     <td>{roblox.b}</td>
+     <td>28</td>
      </tr>
     
    </table>);
