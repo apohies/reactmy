@@ -19,9 +19,9 @@ class App extends React.Component
   render()
   {
   return <div>
-     {/* <Tasks  tasks={this.state.tasks} />
+      
 
-    <Chango /> */}
+   
 
     <NameForm/>
     

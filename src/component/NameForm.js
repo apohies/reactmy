@@ -3,9 +3,12 @@ import Tablita from "./Tablita";
 
 
 class NameForm extends React.Component {
+
     constructor(props) {
       super(props);
-      this.state = {value: ''};
+      this.state = {value: '',monito:''};
+
+      
   
       this.handleChange = this.handleChange.bind(this);
       this.handleSubmit = this.handleSubmit.bind(this);
@@ -19,6 +22,12 @@ class NameForm extends React.Component {
      
         
       event.preventDefault();
+      if(this.state.value == '')
+      {
+        alert('ni mergas');
+      }else{
+      this.setState({monito:this.state.value})
+      }
     }
   
     render() {
@@ -31,10 +40,10 @@ class NameForm extends React.Component {
             Name:
             <input type="text" value={this.state.value} onChange={this.handleChange} />
           </label>
-          <input type="submit" value="Submit" />
+          <input type="submit" value="Submit" onClick={this.handleSubmit} />
         </form>
         
-        <Tablita nombre={this.state.value} > </Tablita>
+        <Tablita nombre={this.state.monito} > </Tablita>
        
 
         </div>
