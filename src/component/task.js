@@ -7,6 +7,7 @@ class  Tasks extends React.Component
     render()
     {
         return  this.props.tasks.map(tasks => <Tarea tasks={tasks} key={tasks.id}/>);
+         
     }
 
 }

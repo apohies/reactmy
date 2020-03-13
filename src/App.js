@@ -6,6 +6,8 @@ import  Tasks from "./component/task";
 import  Chango from "./component/Chango";
 import  NameForm from "./component/NameForm";
 
+import TaskForm from "./component/TaskForm"
+
 
 
 
@@ -17,14 +19,27 @@ class App extends React.Component
 
     tasks:tasks 
   }
+
+  addTask=(title,descripcion)=>{
+    const  newTask ={
+                      id:45,
+                      title:title,
+                      descripcion:descripcion
+                    }
+                  this.setState({
+                    tasks:[...this.state.tasks,newTask]
+                  })  
+  
+  }
+
   render()
   {
   return <div>
       
 
    
-
-    <NameForm/>
+<TaskForm addTask={this.addTask}></TaskForm>
+<Tasks tasks={this.state.tasks}></Tasks>
     
      </div>
   }
