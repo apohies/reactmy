@@ -6,7 +6,7 @@ class NameForm extends React.Component {
 
     constructor(props) {
       super(props);
-      this.state = {nombre: '',monito:'',apellido:'',
+      this.state = {nombre: '',monito:'',apellido:'',edad:'',
                   
           };
 
@@ -23,19 +23,20 @@ class NameForm extends React.Component {
       {
         nadita=event.target.value;
         this.setState({nombre: nadita})
-      } else{
+      } else if(event.target.name=="apellido"){
 
         apelli=event.target.value;
               this.setState({apellido:apelli})
-      }
-      
+      }    else {
+        this.setState({edad:event.target.value});
+      }   
       
     }
                 
     handleSubmit(event) {
       event.preventDefault();
     
-      this.setState({monito: {a:this.state.nombre , b:this.state.apellido }})
+      this.setState({monito: {a:this.state.nombre , b:this.state.apellido , c:this.state.edad}})
 
     
   }
@@ -71,6 +72,11 @@ class NameForm extends React.Component {
                     <div className="form-group">
                         <label>Apellido:</label>
                         <input type="text" name= "apellido"  value={this.state.apellido}className="form-control" onChange={this.handleChange} />
+                    </div>
+
+                    <div className="form-group">
+                        <label>edad:</label>
+                        <input type="number" name= "edad"  value={this.state.edad}className="form-control" onChange={this.handleChange} />
                     </div>
 
                   <input type="submit" className="btn btn-success" value="Enviar" onClick={this.handleSubmit} />

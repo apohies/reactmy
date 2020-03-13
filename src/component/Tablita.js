@@ -29,7 +29,7 @@ class  Tablita  extends React.Component
          
           <td>{roblox.a}</td>
           <td>{roblox.b}</td>
-          <td>Veneco</td>
+     <td>{roblox.c}</td>
         </tr>
       
       </tbody>
