@@ -13,19 +13,29 @@ class  Tablita  extends React.Component
            
 
             const{roblox}=this.props;
-     return (<table >
-     <tr>
-       <th>Firstname</th>
-       <th>Lastname</th> 
-       <th>Age</th>
-     </tr>
-     <tr>
-       <td>{roblox.a} </td>
-     <td>{roblox.b}</td>
-     <td>28</td>
-     </tr>
-    
-   </table>);
+     return (
+
+      <table className="table">
+      <thead>
+        <tr>
+          
+          <th scope="col">Nombre</th>
+          <th scope="col">Apellido</th>
+          <th scope="col">Nacionalidad</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+         
+          <td>{roblox.a}</td>
+          <td>{roblox.b}</td>
+          <td>Veneco</td>
+        </tr>
+      
+      </tbody>
+    </table>
+     
+        );
 
       
     }

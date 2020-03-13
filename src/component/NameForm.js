@@ -34,13 +34,10 @@ class NameForm extends React.Component {
                 
     handleSubmit(event) {
       event.preventDefault();
-      if(this.state.nombre == '')
-      {
-        alert('ni mergas');
-      }else{
+    
       this.setState({monito: {a:this.state.nombre , b:this.state.apellido }})
 
-    }
+    
   }
 
 
@@ -54,29 +51,37 @@ class NameForm extends React.Component {
   
   render() {
     
-    console.log(this.state.monito);
+    console.log(this.state.nombre);
       
         return (
-            <div>
-        <form onSubmit={this.handleSubmit}>
-          <label>
-            Name:
-            <input type="text"  name="nombre"  onChange={this.handleChange} />
-          </label>
+           
 
-          <label>
-            apellido:
-            <input type="text" name= "apellido"  onChange={this.handleChange} />
-          </label>
+            <div className="row">
+              <div className="card col-md-6 col-md-offset 3">
+                  <div className="card-header">
+                    Formulario de incripccion 
+                  </div>
+                  <div className="card-body">
+                      <form onSubmit={this.handleSubmit}>
+                    <div className="form-group">
+                        <label>Name:</label>
+                        <input type="text"  name="cosito1" value={this.state.nombre}  className="form-control" onChange={this.handleChange} />
+                    </div>
 
+                    <div className="form-group">
+                        <label>Apellido:</label>
+                        <input type="text" name= "apellido"  value={this.state.apellido}className="form-control" onChange={this.handleChange} />
+                    </div>
 
-          <input type="submit" value="Submit" onClick={this.handleSubmit} />
-        </form>
-        
-        <Tablita roblox={this.state.monito} > </Tablita>
-       
+                  <input type="submit" className="btn btn-success" value="Enviar" onClick={this.handleSubmit} />
+                </form>
+                  </div>
+              </div>
+              <div className="card col-md-6 ">
+                  <Tablita roblox={this.state.monito} > </Tablita>
+              </div>   
 
-        </div>
+            </div>
 
         
         );

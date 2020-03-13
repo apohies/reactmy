@@ -1,10 +1,11 @@
 import React from 'react';
-
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import  tasks from "./sample/task.json" ;
 import  Tasks from "./component/task";
 import  Chango from "./component/Chango";
 import  NameForm from "./component/NameForm";
+
 
 
 
